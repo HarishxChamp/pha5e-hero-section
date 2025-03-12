@@ -3,77 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section - Development Preview</title>
+    <title>Healthcare Solutions Developer</title>
     <style>
-        /* Core styles - will enhance incrementally */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #4A148C, #00897B);
-            color: white;
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: -apple-system, system-ui, sans-serif;
+            line-height: 1.6;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: -apple-system, system-ui, sans-serif;
             padding: 1rem;
-            line-height: 1.6;
         }
-        
+
         .hero-content {
             text-align: center;
             max-width: 800px;
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeIn 1s ease-out;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .hero-title {
-            font-size: min(4rem, 8vw);
+            font-size: clamp(2rem, 6vw, 3.5rem);
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
-        
+
         .hero-subtitle {
-            font-size: min(1.5rem, 4vw);
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #94a3b8;
             margin-bottom: 2rem;
-            opacity: 0.9;
         }
-        
+
+        .project-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .project-title {
+            color: #0ea5e9;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .tech-item {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
         .cta-button {
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             font-size: 1rem;
-            background: white;
-            color: #4A148C;
+            background: #0ea5e9;
+            color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 8px;
             cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Basic responsive design - will enhance later */
-        @media (max-width: 480px) {
-            .hero-content { padding: 1.5rem; }
-            .cta-button { padding: 0.8rem 1.5rem; }
         }
     </style>
 </head>
 <body>
     <div class="hero-content">
-        <h1 class="hero-title">Transform Your Vision</h1>
-        <p class="hero-subtitle">Building innovative web solutions with modern technologies</p>
-        <button class="cta-button">Explore Projects</button>
+        <h1 class="hero-title">Healthcare Solutions Developer</h1>
+        <p class="hero-subtitle">Building innovative healthcare applications with modern technologies</p>
+        
+        <div class="project-info">
+            <h2 class="project-title">MedAssist Platform</h2>
+            <p>A comprehensive healthcare management system for improved patient care</p>
+        </div>
+        
+        <div class="tech-stack">
+            <span class="tech-item">React</span>
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">MongoDB</span>
+            <span class="tech-item">Express</span>
+            <span class="tech-item">Redux</span>
+        </div>
+        
+        <button class="cta-button">View Project</button>
     </div>
 </body>
 </html>
