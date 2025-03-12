@@ -1,0 +1,75 @@
+/* Custom variables */
+:root {
+    --primary-color: #4A148C;
+    --secondary-color: #00897B;
+    --text-color: #f4f4f4;
+    --transition-speed: 0.3s;
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial state for animation */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: var(--text-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform var(--transition-speed), 
+                background-color var(--transition-speed),
+                box-shadow var(--transition-speed);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
