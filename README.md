@@ -2,6 +2,9 @@
 
 A modern, responsive hero section implementation inspired by the Pha5e design, featuring smooth animations and interactive elements.
 
+## Live Demo
+Check out the live demo: [Pha5e Hero Section](https://harishxchamp.github.io/pha5e-hero-section/)
+
 ## Features
 
 - Responsive design that works across all device sizes
@@ -17,7 +20,6 @@ A modern, responsive hero section implementation inspired by the Pha5e design, f
 - CSS3
 - JavaScript (ES6+)
 - GSAP for animations
-- Bootstrap for responsive design
 
 ## Project Structure
 
