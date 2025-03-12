@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section - Development Preview</title>
+    <style>
+        /* Core styles - will enhance incrementally */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4A148C, #00897B);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, system-ui, sans-serif;
+            padding: 1rem;
+            line-height: 1.6;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .hero-title {
+            font-size: min(4rem, 8vw);
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-size: min(1.5rem, 4vw);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background: white;
+            color: #4A148C;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Basic responsive design - will enhance later */
+        @media (max-width: 480px) {
+            .hero-content { padding: 1.5rem; }
+            .cta-button { padding: 0.8rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-content">
+        <h1 class="hero-title">Transform Your Vision</h1>
+        <p class="hero-subtitle">Building innovative web solutions with modern technologies</p>
+        <button class="cta-button">Explore Projects</button>
+    </div>
+</body>
+</html>
