@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Solutions Developer</title>
+    <title>Healthcare Developer | Work in Progress</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        :root {
+            --primary: #0ea5e9;
+            --bg-start: #082f49;
+            --bg-end: #0f172a;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
         body {
             min-height: 100vh;
-            background: #0f172a;
-            color: #f8fafc;
+            background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            color: var(--text);
             font-family: -apple-system, system-ui, sans-serif;
             line-height: 1.6;
             display: flex;
@@ -26,6 +34,18 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .wip-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(14, 165, 233, 0.1);
+            color: #7dd3fc;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
         }
 
         .hero-title {
@@ -36,7 +56,7 @@
 
         .hero-subtitle {
             font-size: clamp(1rem, 3vw, 1.25rem);
-            color: #94a3b8;
+            color: var(--text-muted);
             margin-bottom: 2rem;
         }
 
@@ -45,12 +65,23 @@
             padding: 1.5rem;
             border-radius: 12px;
             margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .project-title {
-            color: #0ea5e9;
+            color: var(--primary);
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
+        }
+
+        .project-status {
+            display: inline-block;
+            background: rgba(14, 165, 233, 0.1);
+            color: #7dd3fc;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
         }
 
         .tech-stack {
@@ -58,7 +89,7 @@
             flex-wrap: wrap;
             gap: 0.8rem;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin: 1.5rem 0;
         }
 
         .tech-item {
@@ -66,38 +97,72 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .recent-updates {
+            text-align: left;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .update-item {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(14, 165, 233, 0.3);
         }
 
         .cta-button {
             padding: 0.8rem 1.5rem;
             font-size: 1rem;
-            background: #0ea5e9;
+            background: var(--primary);
             color: white;
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #0284c7;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .hero-content { padding: 1.5rem; }
+            .project-info { padding: 1rem; }
+            .tech-item { font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
     <div class="hero-content">
-        <h1 class="hero-title">Healthcare Solutions Developer</h1>
-        <p class="hero-subtitle">Building innovative healthcare applications with modern technologies</p>
+        <span class="wip-badge">In Development</span>
+        <h1 class="hero-title">Healthcare Developer</h1>
+        <p class="hero-subtitle">Building the MedAssist platform to improve healthcare workflows</p>
         
         <div class="project-info">
             <h2 class="project-title">MedAssist Platform</h2>
-            <p>A comprehensive healthcare management system for improved patient care</p>
+            <span class="project-status">Active Development</span>
+            <p>A healthcare management system focusing on patient care and medical workflows</p>
+            
+            <div class="recent-updates">
+                <div class="update-item">🔧 Implementing patient records module</div>
+                <div class="update-item">🐛 Fixed appointment scheduling bug</div>
+                <div class="update-item">✨ Added basic lab report viewing</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Express</span>
+                <span class="tech-item">Redux</span>
+            </div>
         </div>
         
-        <div class="tech-stack">
-            <span class="tech-item">React</span>
-            <span class="tech-item">Node.js</span>
-            <span class="tech-item">MongoDB</span>
-            <span class="tech-item">Express</span>
-            <span class="tech-item">Redux</span>
-        </div>
-        
-        <button class="cta-button">View Project</button>
+        <button class="cta-button">View Development Progress</button>
     </div>
 </body>
 </html>
